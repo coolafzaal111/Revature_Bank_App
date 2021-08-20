@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Amount Deposit</title>
+    
+</head>
+<body>
+    <div class="jumbotron">
+        <h1 class="display-3">Deposit</h1>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        <p class="lead"><h3>This is a Deposit Page</h3></p>
+        <hr class="my-5">
+
+        <form action="deposit" method="GET">
+            <div>Username</div>
+            <div><input type="text" id="username" name="username" placeholder="Enter Username"></div><br>
+            <div>Enter Amount</div>
+            <div><input type="Number" id="tranamount" name="tranamount" placeholder="Enter Amount"></div><br>
+            <div> 
+                &emsp;&emsp;&emsp;
+                
+                <button class="btn btn-primary" id="b1" type="submit"><i>Deposit</i></button></div>
+        </form>
+    </div>
+
+    <script>
+        b1.onclick=()=>{
+           
+       
+        alert("Amount Deposited Successfully")
+        location.href="welcomecustomer.html";
+        }
+    </script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+</body>
+</html>

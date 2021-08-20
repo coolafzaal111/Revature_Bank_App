@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Open Bank Account</title>
+</head>
+<body>
+    <div class="jumbotron">
+        <h1 class="display-3">Account Opening Page</h1>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        <h3><class="lead"><strong>Hii Please enter the Details</strong></p></h3>
+        <hr class="my-3">
+        
+    </div>
+    <div class="container">
+        <div class="shivu">
+            <form action="" method="POST">
+                    
+                    <div>Username</div>
+                    <div>
+                        <input class="form-control" type="text" name="username" id="username" placeholder="Enter User Name">
+                    </div>
+                    <br>
+                    <div>First Name</div>
+                    <div>
+                        <input class="form-control" type="text" name="fname" id="fname" placeholder="Enter First Name">
+                    </div>
+                    <br>
+                    <div>Last Name</div>
+                    <div>
+                        <input class="form-control" type="text" name="lname" id="lname" placeholder="Enter Last Name">
+                    </div>
+                    <br>
+                    <div>DOB</div>
+                    <div>
+                        <input class="form-control" type="date" name="dob" id="dob" placeholder="Enter DOB">
+                    </div>
+                    <br>
+                    <div>Aadhar Card</div>
+                    <div>
+                        <input type="Number" name="aadhar" id="aadhar" placeholder="Enter Aadhar Card NO.">
+                    </div>
+                    <br>
+                    <div>PAN</div>
+                    <div>
+                        <input type="Number" name="pan" id="pan" placeholder="Enter PAN">
+                    </div>
+                    <br>
+                    <div>City</div>
+                    <div>
+                        <input class="form-control" type="text" name="city" id="city" placeholder="Enter City">
+                    </div>
+                    <br>
+                    <div>State</div>
+                    <div>
+                        <input class="form-control" type="text" name="state" id="state" placeholder="Enter State">
+                    </div>
+                    <br>
+                    <div>Opening Balance</div>
+                    <div>
+                        <input type="Number" name="openingbalance" id="openingbalance" placeholder="Enter Opening Balance">
+                    </div>
+                    <br>
+                     <br>
+                    
+        <div>
+            &emsp;&emsp;&emsp;
+            <button class="btn btn-primary" id="b1" type="button"><i>Click Here to Register</i></button>
+        </div>
+        <br><br>
+       
+        </form>
+    </div>
+
+    <!--<script src="account.js"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+<script>
+    b1.onclick = () => {
+    let url = "http://localhost:8080/project-1/openaccount";
+    fetch(url,{
+        method : 'POST', body: JSON.stringify({
+            username : document.getElementById('username').value,
+            fname : document.getElementById('fname').value,
+            lname : document.getElementById('lname').value,
+            dob : document.getElementById('dob').value,
+            aadhar : document.getElementById('aadhar').value,
+            pan : document.getElementById('pan').value,
+            city : document.getElementById('city').value,
+            state : document.getElementById('state').value,
+            openingbalance : document.getElementById('openingbalance').value
+        }),
+        headers: {
+            'Content-type': 'application/json; charset=UTF-8',
+          }
+
+    });
+    alert("Account created Successfully");
+    location.href="customerwelcomepage.html";
+}
+</script>
+</body>
+</html>
